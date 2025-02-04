@@ -1,7 +1,3 @@
-# LIMO
-LIMO: Less is More for Reasoning
-
-
 # LIMO: Less is More for Reasoning
 
 <div align="center">
