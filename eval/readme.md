@@ -104,7 +104,7 @@ python eval.py \
 
 While rule-based evaluation works well for structured answers (e.g., multiple choice questions, pure numerical responses) like those in AIME and most MATH problems, more complex response types (expressions, equations, or simple natural language descriptions) require model-based evaluation.
 
-We use Qwen2.5-32B-Instruct as our judge model due to its excellent instruction-following capabilities and strong foundational knowledge. For reference, our evaluation prompts can be found in `prompt.txt`.
+We use Qwen2.5-32B-Instruct as our judge model due to its excellent instruction-following capabilities and strong foundational knowledge. For reference, our evaluation prompts can be found in [`prompt.txt`](https://github.com/GAIR-NLP/LIMO/blob/main/eval/prompt.txt).
 
 
 ## Acknowledgments
