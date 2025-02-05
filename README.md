@@ -72,7 +72,7 @@ We release our datasets through Hugging Face 🤗:
 
 | Dataset | Description | Size | Link |
 |---------|-------------|------|------|
-| `LIMO` | Training set used to train LIMO model | 817 | [🤗](https://huggingface.co/datasets/GAIR/LIMO) |
+| LIMO | Training set used to train LIMO model | 817 | [🤗](https://huggingface.co/datasets/GAIR/LIMO) |
 
 Note: We are gradually releasing additional datasets mentioned in our paper, including those used for comparative experiments, to facilitate reproducibility and further analysis by the research community. Stay tuned!
 
