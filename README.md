@@ -78,7 +78,7 @@ Note: We are gradually releasing additional datasets mentioned in our paper, inc
 
 ## Quick Start
 
-Our model is fine-tuned on [Qwen2.5-32B-Instruct](https://huggingface.co/Qwen/Qwen2.5-32B-Instruct) and is compatible with most mainstream frameworks like [HF Transformers](https://github.com/huggingface/transformers), [VLLM](https://github.com/vllm-project/vllm), [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) and etc. For inference, we use 4× H100 80GB GPUs (tested to work with a minimum of 2× H100 GPUs).
+Our model is fine-tuned on [Qwen2.5-32B-Instruct](https://huggingface.co/Qwen/Qwen2.5-32B-Instruct) and is compatible with most mainstream frameworks like [HF Transformers](https://github.com/huggingface/transformers), [VLLM](https://github.com/vllm-project/vllm), [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) and etc. 
 
 
 <details>
@@ -187,7 +187,7 @@ print(output[0].outputs[0].text)
 
 ## Training
 
-We utilize [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) framework for training, which provides a convenient and efficient training pipeline. Our training setup used 32× H100 80GB GPUs.
+We utilize [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) framework for training, which provides a convenient and efficient training pipeline.
 
 ### Training Setup
 

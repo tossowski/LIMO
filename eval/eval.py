@@ -94,7 +94,6 @@ def get_three_prompt(prompt_type, data_name):
 def infer(args):
     model_name_or_path = args.model_name_or_path
     print(f"current eval model: {model_name_or_path}")
-    # model_name="/inspire/hdd/ws-c6f77a66-a5f5-45dc-a4ce-1e856fe7a7b4/project/public/model/Qwen2.5-Math-7B"
     
     n_sampling = args.n_sampling
     factor = 1
