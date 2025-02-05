@@ -200,7 +200,7 @@ We utilize [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) framework f
    - Format the dataset according to LLaMA-Factory's [data preparation guidelines](https://github.com/hiyouga/LLaMA-Factory/tree/main/data). We also convert LIMO dataset to [the supported format](https://github.com/hiyouga/LLaMA-Factory/tree/main/data/limo.json).
 
 3. **Configuration**
-   - Use our provided configuration file at [`./train/train_limo.yaml`](https://github.com/GAIR-NLP/LIMO/tree/main/train/examples/train_limo.yaml).
+   - Use our provided [configuration file](https://github.com/GAIR-NLP/LIMO/tree/main/train/examples/train_limo.yaml).
    - The config file contains all necessary hyperparameters and training settings.
 
 ### Launch Training
