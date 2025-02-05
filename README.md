@@ -189,15 +189,45 @@ print(output[0].outputs[0].text)
 
 We utilize [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) framework for training, which provides a convenient and efficient training pipeline. Our training setup used 32× H100 80GB GPUs.
 
-To reproduce our training process:
+### Training Setup
 
-- Set up LLaMA-Factory following their official [documentation](https://github.com/hiyouga/LLaMA-Factory#installation).
+1. **Environment Setup**
+   - Set up LLaMA-Factory following their official [documentation](https://github.com/hiyouga/LLaMA-Factory#installation)
+   - Ensure all dependencies are properly installed and configured
 
-- Prepare the LIMO dataset from [🤗](https://huggingface.co/datasets/GAIR/LIMO) and format it according to LLaMA-Factory's [data preparation guidelines](https://github.com/hiyouga/LLaMA-Factory/tree/main/data).
+2. **Data Preparation**
+   - Obtain the LIMO dataset from [🤗 Hugging Face](https://huggingface.co/datasets/GAIR/LIMO)
+   - Format the dataset according to LLaMA-Factory's [data preparation guidelines](https://github.com/hiyouga/LLaMA-Factory/tree/main/data). We also convert LIMO dataset to [the supported format](https://github.com/hiyouga/LLaMA-Factory/tree/main/data/limo.json).
 
-- Use our provided configuration file at [`./train/train_limo.yaml`](./train/train_limo.yaml).
+3. **Configuration**
+   - Use our provided configuration file at [`./train/train_limo.yaml`](https://github.com/GAIR-NLP/LIMO/tree/main/train/examples/train_limo.yaml)
+   - The config file contains all necessary hyperparameters and training settings
 
-- Launch training with LLaMA-Factory using our config according to [LLaMA-Factory's official training examples](https://github.com/hiyouga/LLaMA-Factory/blob/main/examples/README.md).
+### Launch Training
+
+For multi-node training, use the following command:
+
+```bash
+FORCE_TORCHRUN=1 \
+NNODES=${PET_NNODES} \
+NODE_RANK=${PET_NODE_RANK} \
+MASTER_ADDR=${MASTER_ADDR} \
+MASTER_PORT=${MASTER_PORT} \
+llamafactory-cli train <path to yaml config file>
+```
+
+Where:
+- `PET_NNODES`: Total number of nodes
+- `PET_NODE_RANK`: Rank of current node (0-based)
+- `MASTER_ADDR`: Address of master node
+- `MASTER_PORT`: Port for communication
+- `<path to yaml config file>`: Path to your training configuration YAML
+
+For more detailed training examples and configurations, refer to [LLaMA-Factory's official training examples](https://github.com/hiyouga/LLaMA-Factory/blob/main/examples/README.md).
+
+> **Note**: Multi-node training environments can vary significantly between different machines and cluster setups. You'll need to adapt the training configuration and launch commands according to your specific environment and infrastructure.
+
+
 
 ## Evaluation
 
