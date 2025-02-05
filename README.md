@@ -9,7 +9,8 @@
 *An efficient approach for mathematical reasoning with minimal but high-quality training data*
 </div>
 
-![](./images/limo.png)
+
+<p align="center"> <img src="./images/limo.png" style="width: 85%;" id="title-icon">       </p>
 
 ## 📌 Table of Contents
 - [Overview](#overview)
