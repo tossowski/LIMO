@@ -192,16 +192,16 @@ We utilize [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) framework f
 ### Training Setup
 
 1. **Environment Setup**
-   - Set up LLaMA-Factory following their official [documentation](https://github.com/hiyouga/LLaMA-Factory#installation)
-   - Ensure all dependencies are properly installed and configured
+   - Set up LLaMA-Factory following their official [documentation](https://github.com/hiyouga/LLaMA-Factory#installation).
+   - Ensure all dependencies are properly installed and configured.
 
 2. **Data Preparation**
-   - Obtain the LIMO dataset from [🤗 Hugging Face](https://huggingface.co/datasets/GAIR/LIMO)
+   - Obtain the LIMO dataset from [🤗 Hugging Face](https://huggingface.co/datasets/GAIR/LIMO).
    - Format the dataset according to LLaMA-Factory's [data preparation guidelines](https://github.com/hiyouga/LLaMA-Factory/tree/main/data). We also convert LIMO dataset to [the supported format](https://github.com/hiyouga/LLaMA-Factory/tree/main/data/limo.json).
 
 3. **Configuration**
-   - Use our provided configuration file at [`./train/train_limo.yaml`](https://github.com/GAIR-NLP/LIMO/tree/main/train/examples/train_limo.yaml)
-   - The config file contains all necessary hyperparameters and training settings
+   - Use our provided configuration file at [`./train/train_limo.yaml`](https://github.com/GAIR-NLP/LIMO/tree/main/train/examples/train_limo.yaml).
+   - The config file contains all necessary hyperparameters and training settings.
 
 ### Launch Training
 
