@@ -1,12 +1,10 @@
 # LIMO: Less Is More for Reasoning 🚀
 
-<div align="center">
-
-[![Conference](https://img.shields.io/badge/ARXIV-2024-blue)]([https://arxiv.org/abs/](https://arxiv.org/pdf/2502.03387))
-[![GitHub stars](https://img.shields.io/github/stars/GAIR-NLP/LIMO.svg?style=social&label=Star&maxAge=2592000)](https://github.com/GAIR-NLP/LIMO)
-
-*An efficient approach for mathematical reasoning with minimal but high-quality training data*
-</div>
+<p align="center">
+  📄 <a href="https://arxiv.org/pdf/2502.03387" target="_blank">Paper</a> &nbsp; | &nbsp;
+  🌐 <a href="https://huggingface.co/datasets/GAIR/LIMO" target="_blank">Dataset</a> &nbsp; | &nbsp;
+  📘 <a href="https://huggingface.co/GAIR/LIMO" target="_blank">Model</a>
+</p>
 
 
 <p align="center"> <img src="./images/limo.png" style="width: 85%;" id="title-icon">       </p>
