@@ -2,8 +2,7 @@
 
 <div align="center">
 
-[![Conference](https://img.shields.io/badge/ARXIV-2024-blue)](https://arxiv.org/abs/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Conference](https://img.shields.io/badge/ARXIV-2024-blue)]([https://arxiv.org/abs/](https://arxiv.org/pdf/2502.03387))
 [![GitHub stars](https://img.shields.io/github/stars/GAIR-NLP/LIMO.svg?style=social&label=Star&maxAge=2592000)](https://github.com/GAIR-NLP/LIMO)
 
 *An efficient approach for mathematical reasoning with minimal but high-quality training data*
@@ -246,10 +245,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Citation
 
 ```bibtex
-@article{limo2024,
-title={LIMO: Less is More for Mathematical Reasoning},
-author={},
-journal={arXiv preprint arXiv:},
-year={2024}
+@misc{ye2025limoreasoning,
+      title={LIMO: Less is More for Reasoning}, 
+      author={Yixin Ye and Zhen Huang and Yang Xiao and Ethan Chern and Shijie Xia and Pengfei Liu},
+      year={2025},
+      eprint={2502.03387},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2502.03387}, 
 }
 ```
