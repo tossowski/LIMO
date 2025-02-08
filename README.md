@@ -194,7 +194,7 @@ We utilize [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) framework f
 
 2. **Data Preparation**
    - Obtain the LIMO dataset from [🤗 Hugging Face](https://huggingface.co/datasets/GAIR/LIMO).
-   - Format the dataset according to LLaMA-Factory's [data preparation guidelines](https://github.com/hiyouga/LLaMA-Factory/tree/main/data). We also convert LIMO dataset to [the supported format](https://github.com/hiyouga/LLaMA-Factory/tree/main/data/limo.json).
+   - Format the dataset according to LLaMA-Factory's [data preparation guidelines](https://github.com/hiyouga/LLaMA-Factory/tree/main/data). We also convert LIMO dataset to [the supported format](https://github.com/GAIR-NLP/LIMO/blob/main/train/data/limo.json).
 
 3. **Configuration**
    - Use our provided [configuration file](https://github.com/GAIR-NLP/LIMO/tree/main/train/examples/train_limo.yaml).
@@ -232,7 +232,7 @@ We also release scripts for evaluating Large Language Models (LLMs) on mathemati
 
 For rule-based evaluation, we support pure numerical problems like AIME and most MATH problems. For more complex responses (expressions, equations, or natural language descriptions), we employ model-based evaluation using Qwen2.5-32B-Instruct as the judge model.
 
-For detailed instructions and implementation details, please refer to [`eval/README.md`](./eval/README.md).
+For detailed instructions and implementation details, please refer to [`eval/README.md`](./eval/readme.md).
 
 
 ## License
