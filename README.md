@@ -9,6 +9,15 @@
 
 <p align="center"> <img src="./images/limo.png" style="width: 85%;" id="title-icon">       </p>
 
+
+## Updates
+- [2024/02/10] 🚨 We've added LIMO's performance on the recently completed [AIME 2025 Part 1 evaluation](https://github.com/GAIR-NLP/AIME-Preview), where it achieved a solid score of 44.5, demonstrating competitive performance using only 817 training samples compared to other models trained on much larger datasets (800k samples).
+- [2024/02/10] 🚨 [Third-party evaluations](https://x.com/WenhuChen/status/1888691381054435690) highlight LIMO's strong generalization capabilities
+- [2025/02/08] 🚨 The LIMO dataset has received positive recognition from the [community](https://x.com/stefan_fee/status/1888203185937907993). According to third-party evaluations, the dataset achieved a 10-percentage point performance improvement on AIME24 and GPQA benchmarks, and a 3-point improvement on MATH-500. These experimental results demonstrate LIMO's potential in enhancing RL Scaling.
+
+
+
+
 ## 📌 Table of Contents
 - [Overview](#overview)
 - [Key Results](#key-results)
@@ -30,6 +39,30 @@ LIMO challenges the conventional wisdom in mathematical reasoning by demonstrati
 - 📚 Releases high-quality datasets and evaluation tools
 
 ## Key Results
+
+### New Results on AIME 2025
+| Model | Samples | AIME 2024 | AIME I 2025 (AVG) |
+|-------|----------|------------|------------------|
+| o3-mini-high | N/A | 83.8 | 76.7 |
+| o3-mini-medium | N/A | 75.8 | 66.7 |
+| DeepSeek-R1 | N/A | 79.8 | 65.0 |
+| DeepSeek-R1-Distill-Llama-70B | 800k | 57.1 | 51.4 |
+| o1-mini | N/A | 63.6 | 50.8 |
+| DeepSeek-R1-Distill-Qwen-14B | 800k | 61.7 | 46.7 |
+| DeepSeek-R1-Distill-Qwen-32B | 800k | 58.3 | 46.1 |
+| **LIMO** | 817 | 56.3 | 44.5 |
+| o3-mini-low | N/A | 56.3 | 44.2 |
+| gemini-2.0-flash-thinking | N/A | 61.5 | 43.3 |
+| o1-preview | N/A | 44.6 | 37.5 |
+| QwQ | N/A | 46.7 | 37.2 |
+| DeepSeek-R1-Distill-Qwen-7B | 800k | 49.6 | 36.9 |
+| s1 | 1k | 32.9 | 28.9 |
+| DeepSeek-R1-Distill-Qwen-1.5B | 800k | 25.0 | 28.0 |
+| DeepSeek-R1-Distill-Llama-8B | 800k | 37.1 | 24.7 |
+
+
+
+
 
 | Model | AIME24 | MATH500 | Training Samples |
 |-------|--------|---------|-----------------|
