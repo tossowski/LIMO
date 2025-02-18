@@ -11,8 +11,8 @@
 
 
 ## Updates
+- [2024/02/18] 🚨 We've added LIMO's performance on the recently completed [AIME 2025 evaluation](https://github.com/GAIR-NLP/AIME-Preview), where it achieved a solid score of 44.6, demonstrating competitive performance using only 817 training samples compared to other models trained on much larger datasets (800k samples).
 - [2024/02/10] 🚨 [Third-party evaluations](https://x.com/WenhuChen/status/1888691381054435690) highlight LIMO's strong generalization capabilities
-- [2024/02/10] 🚨 We've added LIMO's performance on the recently completed [AIME 2025 Part 1 evaluation](https://github.com/GAIR-NLP/AIME-Preview), where it achieved a solid score of 44.5, demonstrating competitive performance using only 817 training samples compared to other models trained on much larger datasets (800k samples).
 - [2025/02/08] 🚨 The LIMO dataset has received positive recognition from the [community](https://x.com/stefan_fee/status/1888203185937907993). According to third-party evaluations, the dataset achieved a 10-percentage point performance improvement on AIME24 and GPQA benchmarks, and a 3-point improvement on MATH-500. These experimental results demonstrate LIMO's potential in enhancing RL Scaling.
 
 
