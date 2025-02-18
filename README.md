@@ -11,7 +11,7 @@
 
 
 ## Updates
-- [2024/02/10] 🚨 We've added LIMO's performance on the recently completed [AIME 2025 Part 1 evaluation](https://github.com/GAIR-NLP/AIME-Preview), where it achieved a solid score of 44.5, demonstrating competitive performance using only 817 training samples compared to other models trained on much larger datasets (800k samples).
+- [2024/02/18] 🚨 We've added LIMO's performance on the recently completed [AIME 2025 evaluation](https://github.com/GAIR-NLP/AIME-Preview), where it achieved a solid score of 44.6, demonstrating competitive performance using only 817 training samples compared to other models trained on much larger datasets (800k samples).
 - [2024/02/10] 🚨 [Third-party evaluations](https://x.com/WenhuChen/status/1888691381054435690) highlight LIMO's strong generalization capabilities
 - [2025/02/08] 🚨 The LIMO dataset has received positive recognition from the [community](https://x.com/stefan_fee/status/1888203185937907993). According to third-party evaluations, the dataset achieved a 10-percentage point performance improvement on AIME24 and GPQA benchmarks, and a 3-point improvement on MATH-500. These experimental results demonstrate LIMO's potential in enhancing RL Scaling.
 
@@ -19,14 +19,21 @@
 
 
 ## 📌 Table of Contents
-- [Overview](#overview)
-- [Key Results](#key-results)
-- [Model Zoo](#model-zoo)
-- [Datasets](#datasets)
-- [Quick Start](#quick-start)
-- [Training](#training)
-- [Evaluation](#evaluation)
-- [Citation](#citation)
+- [LIMO: Less Is More for Reasoning 🚀](#limo-less-is-more-for-reasoning-)
+  - [Updates](#updates)
+  - [📌 Table of Contents](#-table-of-contents)
+  - [Overview](#overview)
+  - [Key Results](#key-results)
+    - [New Results on AIME 2025](#new-results-on-aime-2025)
+  - [Model Zoo](#model-zoo)
+  - [Datasets](#datasets)
+  - [Quick Start](#quick-start)
+  - [Training](#training)
+    - [Training Setup](#training-setup)
+    - [Launch Training](#launch-training)
+  - [Evaluation](#evaluation)
+  - [License](#license)
+  - [Citation](#citation)
 
 
 ## Overview
@@ -41,49 +48,49 @@ LIMO challenges the conventional wisdom in mathematical reasoning by demonstrati
 ## Key Results
 
 ### New Results on AIME 2025
-| Model | Samples | AIME 2024 | AIME I 2025 (AVG) |
-|-------|----------|------------|------------------|
-| o3-mini-high | N/A | 83.8 | 76.7 |
-| o3-mini-medium | N/A | 75.8 | 66.7 |
-| DeepSeek-R1 | N/A | 79.8 | 65.0 |
-| DeepSeek-R1-Distill-Llama-70B | 800k | 57.1 | 51.4 |
-| o1-mini | N/A | 63.6 | 50.8 |
-| DeepSeek-R1-Distill-Qwen-14B | 800k | 61.7 | 46.7 |
-| DeepSeek-R1-Distill-Qwen-32B | 800k | 58.3 | 46.1 |
-| **LIMO** | 817 | 56.3 | 44.5 |
-| o3-mini-low | N/A | 56.3 | 44.2 |
-| gemini-2.0-flash-thinking | N/A | 61.5 | 43.3 |
-| o1-preview | N/A | 44.6 | 37.5 |
-| QwQ | N/A | 46.7 | 37.2 |
-| DeepSeek-R1-Distill-Qwen-7B | 800k | 49.6 | 36.9 |
-| s1 | 1k | 32.9 | 28.9 |
-| DeepSeek-R1-Distill-Qwen-1.5B | 800k | 25.0 | 28.0 |
-| DeepSeek-R1-Distill-Llama-8B | 800k | 37.1 | 24.7 |
+| Model                         | Samples | AIME 2024 | AIME I 2025 (AVG) |
+| ----------------------------- | ------- | --------- | ----------------- |
+| o3-mini-high                  | N/A     | 83.8      | 76.7              |
+| o3-mini-medium                | N/A     | 75.8      | 66.7              |
+| DeepSeek-R1                   | N/A     | 79.8      | 65.0              |
+| DeepSeek-R1-Distill-Llama-70B | 800k    | 57.1      | 51.4              |
+| o1-mini                       | N/A     | 63.6      | 50.8              |
+| DeepSeek-R1-Distill-Qwen-14B  | 800k    | 61.7      | 46.7              |
+| DeepSeek-R1-Distill-Qwen-32B  | 800k    | 58.3      | 46.1              |
+| **LIMO**                      | 817     | 56.3      | 44.5              |
+| o3-mini-low                   | N/A     | 56.3      | 44.2              |
+| gemini-2.0-flash-thinking     | N/A     | 61.5      | 43.3              |
+| o1-preview                    | N/A     | 44.6      | 37.5              |
+| QwQ                           | N/A     | 46.7      | 37.2              |
+| DeepSeek-R1-Distill-Qwen-7B   | 800k    | 49.6      | 36.9              |
+| s1                            | 1k      | 32.9      | 28.9              |
+| DeepSeek-R1-Distill-Qwen-1.5B | 800k    | 25.0      | 28.0              |
+| DeepSeek-R1-Distill-Llama-8B  | 800k    | 37.1      | 24.7              |
 
 
 
 
 
-| Model | AIME24 | MATH500 | Training Samples |
-|-------|--------|---------|-----------------|
-| LIMO (Ours) | **57.1%** | **94.8%** | 817 |
-| Previous SOTA | 6.5% | 59.2% | 100k+ |
+| Model         | AIME24    | MATH500   | Training Samples |
+| ------------- | --------- | --------- | ---------------- |
+| LIMO (Ours)   | **57.1%** | **94.8%** | 817              |
+| Previous SOTA | 6.5%      | 59.2%     | 100k+            |
 
 <details>
 <summary>Click to see more detailed results</summary>
 
-| Benchmark | LIMO | Previous SOTA | Improvement |
-|-----------|------|--------------------------|-------------|
-| AIME24 | **57.1%** | 6.5% | +50.6% |
-| MATH500 | **94.8%** | 59.2% | +35.6% |
-| AMC23 | **92.0%** | 40.6% | +51.4% |
-| OlympiadBench | **66.8%** | 36.7% | +30.1% |
-| CHMath | **75.4%** | 11.2% | +64.2% |
-| Gaokao | **81.0%** | 49.4% | +31.6% |
-| Kaoyan | **73.4%** | 32.7% | +40.7% |
-| GradeSchool | **76.2%** | 36.2% | +40.0% |
-| Minerva | 44.9% | **47.1%** | -2.2% |
-| GPQA | 66.7% | **73.3%** | -6.6% |
+| Benchmark     | LIMO      | Previous SOTA | Improvement |
+| ------------- | --------- | ------------- | ----------- |
+| AIME24        | **57.1%** | 6.5%          | +50.6%      |
+| MATH500       | **94.8%** | 59.2%         | +35.6%      |
+| AMC23         | **92.0%** | 40.6%         | +51.4%      |
+| OlympiadBench | **66.8%** | 36.7%         | +30.1%      |
+| CHMath        | **75.4%** | 11.2%         | +64.2%      |
+| Gaokao        | **81.0%** | 49.4%         | +31.6%      |
+| Kaoyan        | **73.4%** | 32.7%         | +40.7%      |
+| GradeSchool   | **76.2%** | 36.2%         | +40.0%      |
+| Minerva       | 44.9%     | **47.1%**     | -2.2%       |
+| GPQA          | 66.7%     | **73.3%**     | -6.6%       |
 
 </details>
 
@@ -91,18 +98,18 @@ LIMO challenges the conventional wisdom in mathematical reasoning by demonstrati
 
 Our LIMO model is available on Hugging Face 🤗:
 
-| Model | Backbone | Size | Link |
-|-------|------|------|------|
-| LIMO | [Qwen2.5-32B-Instruct](https://huggingface.co/Qwen/Qwen2.5-32B-Instruct)  | 32B | [🤗](https://huggingface.co/GAIR/LIMO) |
+| Model | Backbone                                                                 | Size | Link                                  |
+| ----- | ------------------------------------------------------------------------ | ---- | ------------------------------------- |
+| LIMO  | [Qwen2.5-32B-Instruct](https://huggingface.co/Qwen/Qwen2.5-32B-Instruct) | 32B  | [🤗](https://huggingface.co/GAIR/LIMO) |
 
 
 ## Datasets
 
 We release our datasets through Hugging Face 🤗:
 
-| Dataset | Description | Size | Link |
-|---------|-------------|------|------|
-| LIMO | Training set used to train LIMO model | 817 | [🤗](https://huggingface.co/datasets/GAIR/LIMO) |
+| Dataset | Description                           | Size | Link                                           |
+| ------- | ------------------------------------- | ---- | ---------------------------------------------- |
+| LIMO    | Training set used to train LIMO model | 817  | [🤗](https://huggingface.co/datasets/GAIR/LIMO) |
 
 Note: We are gradually releasing additional datasets mentioned in our paper, including those used for comparative experiments, to facilitate reproducibility and further analysis by the research community. Stay tuned!
 
