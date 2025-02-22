@@ -272,7 +272,7 @@ We also release scripts for evaluating Large Language Models (LLMs) on mathemati
 
 For rule-based evaluation, we support pure numerical problems like AIME and most MATH problems. For more complex responses (expressions, equations, or natural language descriptions), we employ model-based evaluation using Qwen2.5-32B-Instruct as the judge model.
 
-For detailed instructions and implementation details, please refer to [`eval/README.md`](./eval/README.md).
+For detailed instructions and implementation details, please refer to [`eval/README.md`](./eval/readme.md).
 
 
 ## License
