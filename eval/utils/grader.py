@@ -457,8 +457,22 @@ def call_with_timeout(func, *args, timeout=3, **kwargs):
 
 
 def check_is_correct(pred, gt, timeout=True):
+    # print(pred, gt)
+    # if pred == gt[-len(pred):]:
+    #     return True
     return math_equal(strip_string(pred), strip_string(gt), timeout=timeout)
 
+# def multiple_choice_correct(question, pred, gt):
+#     print(question)
+#     if pred == gt:
+#         return True
+#     lines = question.split("\n")[:-1]
+#     for line in lines:
+#         if line[1] == ":":
+#             letter = line[0]
+#             value = line.split(" ", 1)
+#             print(letter, value)
+#     return False
 
 def math_equal_simple(pred, gt):
     pred = strip_string(pred)
